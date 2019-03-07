@@ -4,74 +4,129 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <!--bootstrap cdn for css-->
+    <title>Trivia Game</title>
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <!--link for the google font-->
+    <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
 </head>
 <body>
-    <!--Wrapper for entire page-->
-    <div class = "wrapper">
-        <!--Jumbotron for Game Title and instructions-->
-        <div class = "row">
-            <div class="col-12">
-                <div class="jumbotron jumbotron-fluid">
-                    <div class="container">
-                        <h1 class="display-4">Mariachi Madness!</h1>
-                        <p class="lead">How well do you know the marvelous Mexican music of Mariachi? Answer the following questions before time expires to find out!</p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-        <!--Countdown Timer-->
-        <div class="row">
-            <div class="col-12 border solid black">
-                <div id = "timer">
-                    0 
-                </div>
-                
-            </div>
-        </div>
-        
-
-        <!--container for the Form with all the questions and answers-->
-        <div class= "container">
-            <!--row for first question-->
-            <div class = "row">
-
-
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                    <label class="form-check-label" for="inlineRadio1">1</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                    <label class="form-check-label" for="inlineRadio2">2</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
-                    <label class="form-check-label" for="inlineRadio3">3</label>
-                </div>
-            </div>
-        <!--end of container for questions and answers form-->
+    <!--this box holds EVERYthing in my game from title to submit button-->
+    <div class="box">
+        <div class= "header">
+            <h1>Oldies, but Goodies!</h1>
+            <h2>-Music Trivia Game-</h2>
+            <h4>Answer the questions correctly before time runs out!</h4>
         </div>
 
+        <!--start button to commence gameplay-->
+        <!--start button will SHOW gameplay container and hide itself-->
+        <button id = "start-button">Start!</button>
 
+        <!--gameplay container will hold the countdown timer, questions, and submit button-->
+        <!--hide gameplay container until Start button clicked-->
+        <div id= "gameplay-container">
 
+            <!--countdown timer-->
+            <h1 id = "countdown-timer">60</h1>
+            <hr>
+            <div class="questions-container">
+                <h3>Question 1: Don McLean's song "American Pie" was inspired by the fatal plane crash carrying Rock & Roll stars Buddy Holly, the Big Bopper, and which Mexican-American teen heartthrob?</h3>
+                <form>
+                    <input class= "answers" type="radio" data-answer=1 name="question1"> Freddy Fender </input>
+                    <input class= "answers" type="radio" data-answer=2 name="question1"> Richie Valens </input>
+                    <input class= "answers" type="radio" data-answer=3 name="question1"> George Lopez </input>
+                </form>
+                <hr>
+                <h3>Question 2: Which duo brought us the hit songs "The Sound of Silence" and "Mrs. Robinson?" </h3>
+                <form>
+                    <input class= "answers" type="radio" data-answer=1 name="question2"> Diamond and Carmichael </input>
+                    <input class= "answers" type="radio" data-answer=2 name="question2"> Simon and Garfunkel </input>
+                    <input class= "answers" type="radio" data-answer=3 name="question2"> Captain and Teneal </input>
+                </form>
+                <hr>
+                <h3>Question 3: The Beatles hit song, "Yellow Submarine," was written by which band member? </h3>
+                <form>
+                    <input class= "answers" type="radio" data-answer=1 name="question3"> John Lennon </input>
+                    <input class= "answers" type="radio" data-answer=2 name="question3"> Ringo Starr </input>
+                    <input class= "answers" type="radio" data-answer=3 name="question3"> George Harrison </input>
+                </form>
+                <hr>
+                <h3>Question 4: Berry Gordy founded the sweet and soulful music of "Motown" in which American city? </h3>
+                <form>
+                    <input class= "answers" type="radio" data-answer=1 name="question4"> Nashville </input>
+                    <input class= "answers" type="radio" data-answer=2 name="question4"> Detroit </input>
+                    <input class= "answers" type="radio" data-answer=3 name="question4"> Atlanta </input>
+                </form>
+                <hr>
+                <h3>Question 5: Which legendary guitarist performed a psychadelic rendition of the Star Spangled Banner at the Woodstock Music Festival? </h3>
+                <form>
+                    <input class= "answers" type="radio" data-answer=1 name="question5"> Carlos Santana </input>
+                    <input class= "answers" type="radio" data-answer=2 name="question5"> Jimi Hendrix </input>
+                    <input class= "answers" type="radio" data-answer=3 name="question5"> Jerry Garcia </input>
+                </form>
+                <hr>
+                <h3>Question 6: Before going solo, the King of Pop learned his ABC's and 123's as a part of which Motown Records group? </h3>
+                <form>
+                    <input class= "answers" type="radio" data-answer=1 name="question6"> MJ and the Funky Five </input>
+                    <input class= "answers" type="radio" data-answer=2 name="question6"> The Jackson 5 </input>
+                    <input class= "answers" type="radio" data-answer=3 name="question6"> Los Jackson Cinco </input>
+                </form>
+                <hr>
+                <h3>Question 7: This funky R&B supergroup named itself after which 3 key elements?</h3>
+                <form>
+                    <input class= "answers" type="radio" data-answer=1 name="question7"> Water, Fire, and Wind </input>
+                    <input class= "answers" type="radio" data-answer=2 name="question7"> Earth, Wind, and Fire </input>
+                    <input class= "answers" type="radio" data-answer=3 name="question7"> Gold, Silver, and Bronze </input>
+                </form>
+                <hr>
+                <h3>Question 8: Known to fans as CCR, what is this classic rock band's full title?</h3>
+                <form>
+                    <input class= "answers" type="radio" data-answer=1 name="question8"> Crystal Clear Recital </input>
+                    <input class= "answers" type="radio" data-answer=2 name="question8"> Creedence Clearwater Revival </input>
+                    <input class= "answers" type="radio" data-answer=3 name="question8"> Cletus' Crawdad Ruckus </input>
+                </form>
+                <hr>
+                <h3>Question 9: Elton John bid farewell to what road in his album by the same title?</h3>
+                <form>
+                    <input class= "answers" type="radio" data-answer=1 name="question9"> Abbey Road </input>
+                    <input class= "answers" type="radio" data-answer=2 name="question9"> Yellow Brick Road </input>
+                    <input class= "answers" type="radio" data-answer=3 name="question9"> Mainstreet, USA </input>
+                </form>
+                <hr>
+                <h3>Question 10: Diana Ross, Queen of Motown, was backed up by which 3 singers?</h3>
+                <form>
+                    <input class= "answers" type="radio" data-answer=1 name="question10"> The Pips </input>
+                    <input class= "answers" type="radio" data-answer=2 name="question10"> The Supremes </input>
+                    <input class= "answers" type="radio" data-answer=3 name="question10"> The Princesses </input>
+                </form>
+            </div>
+            <hr>
+            <button id = "submit-button">Submit</button>
 
+        <!--end of gameplay div-->
+        </div>
 
-    <!--end wrapper for entire page-->    
+        <!--Results Container, hide until submit button clicked-->
+        <div id = "results-container">
+            <h3>How'd you do?</h3>
+            <hr>
+            <h3>Correct:</h3>
+            <h3>Incorrect:</h3>
+            <h3>Unanswered:</h3>
+        </div>
+        <hr>
+        <!--Play Again button to reset-->
+        <button id="play-again">Play Again</button>
+        <hr>
+    <!--end .box-->
     </div>
 
 
-
-    <!--game.js src link-->
-    <script src="assets/javascript/app.js"></script> </script>
-    <!--jQuery CDN-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!--bootstrap cdn for JQuery-->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="isaacGame.js"></script>
 </body>
 </html>
