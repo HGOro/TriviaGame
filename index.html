@@ -16,13 +16,18 @@
     <div class="box">
         <div class= "header">
             <h1>Oldies, but Goodies!</h1>
-            <h2>-Music Trivia Game-</h2>
+            <h2>-Music Trivia Game-</h2>            
+        </div>
+        <!--start-container for instructions and start-button-->
+        <div id = "start-container">
             <h4>Answer the questions correctly before time runs out!</h4>
+            <hr>
+            <!--start button to commence gameplay-->
+            <!--start button will SHOW gameplay container and hide itself-->
+            <button id = "start-button">Start!</button>
         </div>
 
-        <!--start button to commence gameplay-->
-        <!--start button will SHOW gameplay container and hide itself-->
-        <button id = "start-button">Start!</button>
+
 
         <!--gameplay container will hold the countdown timer, questions, and submit button-->
         <!--hide gameplay container until Start button clicked-->
@@ -32,10 +37,10 @@
             <h1 id = "countdown-timer">60</h1>
             <hr>
             <div class="questions-container">
-                <h3>Question 1: Don McLean's song "American Pie" was inspired by the fatal plane crash carrying Rock & Roll stars Buddy Holly, the Big Bopper, and which Mexican-American teen heartthrob?</h3>
+                <h3>Question 1: Don McLean's song "American Pie" was inspired by the fatal plane crash carrying  '50s Rock & Roll stars Buddy Holly, the Big Bopper, and which Mexican-American teen heartthrob?</h3>
                 <form>
                     <input class= "answers" type="radio" data-answer=1 name="question1"> Freddy Fender </input>
-                    <input class= "answers" type="radio" data-answer=2 name="question1"> Richie Valens </input>
+                    <input class= "answers" type="radio" data-answer=2 name="question1"> Ritchie Valens </input>
                     <input class= "answers" type="radio" data-answer=3 name="question1"> George Lopez </input>
                 </form>
                 <hr>
@@ -43,10 +48,10 @@
                 <form>
                     <input class= "answers" type="radio" data-answer=1 name="question2"> Diamond and Carmichael </input>
                     <input class= "answers" type="radio" data-answer=2 name="question2"> Simon and Garfunkel </input>
-                    <input class= "answers" type="radio" data-answer=3 name="question2"> Captain and Teneal </input>
+                    <input class= "answers" type="radio" data-answer=3 name="question2"> Captain and Tennille </input>
                 </form>
                 <hr>
-                <h3>Question 3: The Beatles hit song, "Yellow Submarine," was written by which band member? </h3>
+                <h3>Question 3: The Beatles' hit song, "Yellow Submarine," was written by which band member? </h3>
                 <form>
                     <input class= "answers" type="radio" data-answer=1 name="question3"> John Lennon </input>
                     <input class= "answers" type="radio" data-answer=2 name="question3"> Ringo Starr </input>
@@ -81,7 +86,7 @@
                     <input class= "answers" type="radio" data-answer=3 name="question7"> Gold, Silver, and Bronze </input>
                 </form>
                 <hr>
-                <h3>Question 8: Known to fans as CCR, what is this classic rock band's full title?</h3>
+                <h3>Question 8: Known to fans as "CCR" for short, what is this classic rock band's full name?</h3>
                 <form>
                     <input class= "answers" type="radio" data-answer=1 name="question8"> Crystal Clear Recital </input>
                     <input class= "answers" type="radio" data-answer=2 name="question8"> Creedence Clearwater Revival </input>
@@ -95,7 +100,7 @@
                     <input class= "answers" type="radio" data-answer=3 name="question9"> Mainstreet, USA </input>
                 </form>
                 <hr>
-                <h3>Question 10: Diana Ross, Queen of Motown, was backed up by which 3 singers?</h3>
+                <h3>Question 10: Diana Ross - Queen of Motown - was backed up by which 3 singers?</h3>
                 <form>
                     <input class= "answers" type="radio" data-answer=1 name="question10"> The Pips </input>
                     <input class= "answers" type="radio" data-answer=2 name="question10"> The Supremes </input>
@@ -112,14 +117,15 @@
         <div id = "results-container">
             <h3>How'd you do?</h3>
             <hr>
-            <h3>Correct:</h3>
-            <h3>Incorrect:</h3>
-            <h3>Unanswered:</h3>
+            <h3>Correct:<span id="correctAns">0</span></h3>
+            <h3>Wrong:<span id="wrongAns">0</span></h3>
+            <h3>Unanswered:<span id="unAns">0</span></h3>
+            <hr>
+            <!--Reset Button-->
+            <button id="play-again">Play Again</button>
         </div>
         <hr>
-        <!--Play Again button to reset-->
-        <button id="play-again">Play Again</button>
-        <hr>
+        
     <!--end .box-->
     </div>
 
@@ -127,6 +133,6 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="isaacGame.js"></script>
+    <script src="./assets/javascript/app.js"></script>
 </body>
 </html>
