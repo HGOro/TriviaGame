@@ -13,6 +13,7 @@ $(document).ready(function(){
             //call function for tallying results
             $("#gameplay-container").hide();
             $("#results-container").show();
+            answerCollect();
 
         };
         console.log(countdown);
