@@ -33,15 +33,18 @@ $(document).ready(function(){
         $("#gameplay-container").show();
         $("#start-container").hide();
         startCountdown();
-        return;
+        
     });
     
     //when submit-button is clicked
     //hide gameplay-container again
+    //tally up the points (answerCollect function)
+    //show results container
     $("#submit-button").on("click", function(){
         //call function for tallying results
         $("#gameplay-container").hide();
         $("#results-container").show();
+        answerCollect();
     });
     
     //results container is hidden until submit-button is clicked
@@ -52,6 +55,7 @@ $(document).ready(function(){
     var wrongCount = 0;
     var unansweredCount = 0;
 
+    
 
 
     //function to collect player answers
